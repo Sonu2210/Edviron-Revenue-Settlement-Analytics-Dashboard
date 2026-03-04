@@ -7,3 +7,77 @@ The dataset includes information about payment transactions, pricing layers, ERP
 
 This project demonstrates skills in data cleaning, financial modeling, analytics, and dashboard development using Excel and Power BI.
 
+**Business Context**
+
+Each transaction processed through Edviron’s platform involves three pricing layers:
+| Pricing Layer        | Description                                             |
+| -------------------- | ------------------------------------------------------- |
+| Edviron Buying Price | Cost at which Edviron purchases payment processing      |
+| Partner Pricing      | Price at which Edviron sells processing to ERP partners |
+| Merchant Pricing     | Price charged by ERP partners to schools                |
+
+These pricing layers determine how revenue is distributed between Edviron and ERP partners.
+
+**Revenue Calculation Logic**
+The following financial metrics were derived from the pricing structure.
+
+ERP Revenue
+ERP Revenue = Merchant Pricing − Partner Pricing
+
+Edviron Net Revenue
+Edviron Net Revenue = Partner Pricing − Edviron Buying
+
+Edviron Gross Revenue
+Edviron Gross Revenue = ERP Revenue + Edviron Net Revenue
+
+These calculations help measure the revenue distribution across the payment ecosystem.
+
+**Project Workflow**
+
+The project was implemented in several stages.
+
+1. Data Cleaning
+Raw transactional data was cleaned and standardized by:
+* Ensuring consistent data types for numeric fields
+* Normalizing pricing values
+* Handling missing or inconsistent values
+* Structuring the dataset for analytical modeling
+
+2. Data Modeling
+Additional columns were created to compute financial metrics such as:
+ * ERP Revenue
+ * Edviron Net Revenue
+ * Edviron Gross Revenue
+ * Gateway Fees
+ * Settlement amounts
+ * Revenue take rates
+These calculations enabled deeper financial analysis of the platform.
+
+3. Dashboard Development
+An interactive analytics dashboard was created to visualize the most important business insights.
+The dashboard focuses on:
+* Platform transaction performance
+* Revenue generation and distribution
+* Payment gateway usage
+* Payment method trends
+* ERP partner performance
+* Settlement exposure
+
+**Dashboard Metrics**
+The dashboard displays the following key performance indicators:
+* Total Transactions
+* Total GMV (Gross Merchandise Value)
+* ERP Revenue
+* Edviron Net Revenue
+* Edviron Gross Revenue
+* Pending Exposure
+* Unique Users
+  
+These metrics provide a quick snapshot of platform activity and financial performance.
+
+****Tools & Technologies**
+This project was built using the following tools:
+* Microsoft Excel – Data cleaning and financial modeling
+* Power BI – Interactive dashboard and data visualization
+* DAX – Creating measures for dashboard metrics
+* GitHub – Project documentation and version control
